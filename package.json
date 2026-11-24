@@ -1,0 +1,16 @@
+{
+  "name": "hyperpong",
+  "version": "1.0.0",
+  "description": "First-person 3D pong across seven impossible dimensions, in one HTML file.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node tools/sim-check.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "three": "0.170.0"
+  }
+}

@@ -1,0 +1,87 @@
+// HYPERPONG — the seven dimensions. Each one breaks a different rule of space.
+export const DIMS = [
+  {
+    name: 'EUCLID',
+    blurb: 'Flat space. Learn to bend it.',
+    sub: 'Flat, honest space. Enjoy it — it is the last time anything here makes sense.',
+    hint: 'Flick the mouse as you hit to curve the ball · Left-click fires a pulse: shove the ball, or stun the enemy paddle',
+    pal: { a: '#16e8ff', b: '#ff2bd6', c: '#6d5cff', bg1: '#03020f', bg2: '#140636' },
+    W: 5.0, H: 3.4, L: 18, speed: 10.5, speedMax: 15.5, aiLives: 3, rewinds: 2,
+    ai: { speed: 3.3, err: 0.55, react: 0.3, predict: 0.1, spin: 0, aim: 0 },
+    mech: {}, bpm: 112, key: 45, prog: 0,
+  },
+  {
+    name: 'TORSION',
+    blurb: 'The tunnel twists and breathes.',
+    sub: 'The tunnel twists, breathes and bends. The physics stays perfectly straight — your eyes will not.',
+    hint: 'Trust the glowing depth ring and the wall markers, not the shape of the tunnel',
+    pal: { a: '#3dffb8', b: '#b45cff', c: '#2f7bff', bg1: '#020a10', bg2: '#1a0838' },
+    W: 5.0, H: 3.4, L: 18, speed: 11.2, speedMax: 16.5, aiLives: 3, rewinds: 1,
+    ai: { speed: 3.9, err: 0.5, react: 0.27, predict: 0.22, spin: 0.8, aim: 0.2 },
+    mech: { twist: true }, bpm: 116, key: 40, prog: 1,
+  },
+  {
+    name: 'EVENT HORIZON',
+    blurb: 'A black hole bends the ball.',
+    sub: 'A wandering black hole drags the ball off course and bends the light around it.',
+    hint: 'Thread the ball close to the hole for a gravity slingshot',
+    pal: { a: '#ffb43a', b: '#3a86ff', c: '#ff6a2a', bg1: '#020206', bg2: '#170a03' },
+    W: 5.0, H: 3.4, L: 18, speed: 11.8, speedMax: 17, aiLives: 4, rewinds: 1,
+    ai: { speed: 4.4, err: 0.47, react: 0.24, predict: 0.35, spin: 1.0, aim: 0.3 },
+    mech: { bh: true }, bpm: 100, key: 38, prog: 2,
+  },
+  {
+    name: 'SUPERPOSITION',
+    blurb: 'Every hit splits the ball.',
+    sub: 'Every hit splits the ball into probability ghosts. Only one of them is real — the membrane decides which.',
+    hint: 'Shoot a ghost before it reaches the membrane to make THAT one real',
+    pal: { a: '#62ffb0', b: '#8fdcff', c: '#21c9a0', bg1: '#010807', bg2: '#04261f' },
+    W: 5.0, H: 3.4, L: 18, speed: 12.2, speedMax: 17.5, aiLives: 4, rewinds: 1,
+    ai: { speed: 4.8, err: 0.45, react: 0.22, predict: 0.42, spin: 1.2, aim: 0.35 },
+    mech: { quantum: true }, bpm: 120, key: 42, prog: 3,
+  },
+  {
+    name: 'WORMHOLE',
+    blurb: 'Rings that skip half the tunnel.',
+    sub: 'The orange ring swallows balls flying away and spits them out of the blue one. Blue does the same to balls flying at you.',
+    hint: 'Hit through the orange ring to skip half the tunnel — and keep an eye on the blue one',
+    pal: { a: '#ff8a1f', b: '#1fb2ff', c: '#ff3d7a', bg1: '#04020c', bg2: '#0c1636' },
+    W: 5.0, H: 3.4, L: 18, speed: 12.6, speedMax: 18, aiLives: 4, rewinds: 1,
+    ai: { speed: 5.1, err: 0.43, react: 0.2, predict: 0.5, spin: 1.4, aim: 0.4 },
+    mech: { portals: true }, bpm: 124, key: 36, prog: 4,
+  },
+  {
+    name: 'GRAVITY SHIFT',
+    blurb: 'Down keeps changing.',
+    sub: 'Gravity rotates every few seconds and the whole world rolls with it. Down is only a suggestion.',
+    hint: 'The ball falls toward the glowing floor. When the warning flashes, the floor moves',
+    pal: { a: '#ff3a5c', b: '#ffd83a', c: '#ff7a2a', bg1: '#0b0205', bg2: '#2a0712' },
+    W: 4.3, H: 4.3, L: 18, speed: 13, speedMax: 18.5, aiLives: 4, rewinds: 1,
+    ai: { speed: 5.4, err: 0.42, react: 0.19, predict: 0.58, spin: 1.6, aim: 0.45 },
+    mech: { gravity: true }, bpm: 118, key: 43, prog: 5,
+  },
+  {
+    name: 'SINGULARITY',
+    blurb: 'Everything, all at once.',
+    sub: 'Reality mutates every point, and the enemy fires glitch bolts that invert your controls. Shoot them down.',
+    hint: 'Red bolts invert your controls — shoot them down or dodge',
+    pal: { a: '#e8f6ff', b: '#ff2a8a', c: '#8a2aff', bg1: '#000000', bg2: '#1a0628' },
+    W: 4.6, H: 4.0, L: 18, speed: 13.2, speedMax: 19, aiLives: 5, rewinds: 2,
+    ai: { speed: 5.8, err: 0.4, react: 0.17, predict: 0.64, spin: 1.9, aim: 0.5 },
+    mech: { chaos: true, bolts: true }, bpm: 128, key: 47, prog: 6,
+  },
+];
+
+export const ENDLESS = {
+  name: 'ENDLESS',
+  blurb: 'Infinite mutations, rising heat.',
+  sub: 'Infinite mutations. The void never runs out of lives — you do.',
+  hint: 'Every point mutates reality, and the enemy gets sharper each time you score',
+  pal: { a: '#ffffff', b: '#ff2a8a', c: '#2affd5', bg1: '#000000', bg2: '#0a0a24' },
+  W: 4.6, H: 4.0, L: 18, speed: 11.6, speedMax: 17.5, aiLives: 0, rewinds: 1,
+  ai: { speed: 4.4, err: 0.46, react: 0.24, predict: 0.4, spin: 1.2, aim: 0.3 },
+  mech: { chaos: true, bolts: true }, bpm: 126, key: 45, prog: 7,
+};
+
+export const MECH_DIM = { twist: 1, bh: 2, quantum: 3, portals: 4, gravity: 5 };
+export const MECH_NAMES = { twist: 'TORSION', bh: 'EVENT HORIZON', quantum: 'SUPERPOSITION', portals: 'WORMHOLE', gravity: 'GRAVITY SHIFT' };
